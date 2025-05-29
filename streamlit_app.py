@@ -18,6 +18,7 @@ st.set_page_config(page_title="Inventory Tracker", layout="wide")
 st.title("Inventory & Revenue Dashboard")
 
 uploaded_file = st.file_uploader("Upload your excel file", type=["xlsx", "xls"])
+
 st.markdown("### Don't have a file?")
 with open("sample.xlsx", "rb") as f:
     st.download_button("Download Sample Excel Template", f, file_name="sample.xlsx")

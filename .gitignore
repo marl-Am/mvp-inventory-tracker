@@ -178,7 +178,6 @@ venv/
 __pycache__/
 *.pyc
 *.log
-*.xlsx
 test/
 
 .env
