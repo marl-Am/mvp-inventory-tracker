@@ -3,9 +3,8 @@ from tkinter import filedialog
 import shutil
 import os
 
-UPLOAD_DIR = "../uploads"
 
-def upload_file():
+def upload_file(UPLOAD_DIR):
     if not os.path.exists(UPLOAD_DIR):
         os.makedirs(UPLOAD_DIR)
 
@@ -18,8 +17,7 @@ def upload_file():
         dest_path = os.path.join(UPLOAD_DIR, file_name)
         shutil.copy(file_path, dest_path)
         print(f"File uploaded to: {dest_path}")
+        return file_name
     else:
         print("No file selected.")
-
-if __name__ == "__main__":
-    upload_file()
+        return None

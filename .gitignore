@@ -179,5 +179,4 @@ __pycache__/
 *.pyc
 *.log
 *.xlsx
-uploads/
-data/
+test/
