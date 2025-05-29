@@ -10,7 +10,12 @@ os.makedirs("../reports", exist_ok=True)
 def create_pdf_report(output_dir, report_dir, report_name="business_report.pdf"):
     os.makedirs(report_dir, exist_ok=True)
 
-    charts = ["stock_by_item.png", "income_vs_expenses.png", "revenue_by_item.png"]
+    charts = [
+        "stock_by_item.png",
+        "income_vs_expenses.png",
+        "revenue_by_item.png",
+        "shipping_cost_over_time.png",
+    ]
 
     pdf = FPDF()
     pdf.set_auto_page_break(True, margin=15)
@@ -35,4 +40,3 @@ def create_pdf_report(output_dir, report_dir, report_name="business_report.pdf")
     report_path = os.path.join(report_dir, report_name)
     pdf.output(report_path)
     print(f"PDF report created and saved to: {report_path}")
-
