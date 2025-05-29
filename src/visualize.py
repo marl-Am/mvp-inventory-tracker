@@ -60,4 +60,17 @@ def visualize(file_name, DATA_DIR, OUTPUT_DIR):
     plt.savefig(os.path.join(OUTPUT_DIR, "revenue_by_item.png"))
     plt.clf()
 
+    # Shipping Costs Over Time png
+    if "shipping_cost" in df.columns:
+        df_shipping = df.groupby('date')['shipping_cost'].sum().reset_index()
+        plt.figure(figsize=(10, 6)) 
+        sns.lineplot(x="date", y="shipping_cost", data=df_shipping, label="Shipping Cost") 
+        plt.title("Shipping Cost Over Time")
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+        plt.gca().xaxis.set_major_locator(mdates.DayLocator())
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.savefig(os.path.join(OUTPUT_DIR, "shipping_cost_over_time.png"))
+        plt.clf()
+
     print(f"Charts saved to {OUTPUT_DIR} directory.")

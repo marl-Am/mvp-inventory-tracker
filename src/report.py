@@ -7,36 +7,6 @@ from openpyxl.utils import get_column_letter
 os.makedirs("../reports", exist_ok=True)
 
 
-def export_excel_report(data, output_dir, excel_filename="report.xlsx"):
-    wb = Workbook()
-    ws = wb.active
-    ws.title = "Business Report"
-
-    headers = [
-        "Date",
-        "Item",
-        "Quantity",
-        "Price",
-        "Shipping Cost",
-        "Expenses",
-        "Income",
-        "Revenue"
-    ]
-    ws.append(headers)
-
-    for row in data:
-        ws.append(row)
-
-    column_widths = [20, 20, 12, 15, 15]
-    for i, width in enumerate(column_widths, 1):
-        col_letter = get_column_letter(i)
-        ws.column_dimensions[col_letter].width = width
-
-    excel_path = os.path.join(output_dir, excel_filename)
-    wb.save(excel_path)
-    print(f"Excel report created and saved to: {excel_path}")
-
-
 def create_pdf_report(output_dir, report_dir, report_name="business_report.pdf"):
     os.makedirs(report_dir, exist_ok=True)
 

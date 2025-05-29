@@ -180,3 +180,5 @@ __pycache__/
 *.log
 *.xlsx
 test/
+
+.env
