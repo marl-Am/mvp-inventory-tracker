@@ -11,16 +11,16 @@ This app helps solo sellers manage old stock by uploading an Excel file, automat
 - Download pdf summary report
 
 ## Folder Structure
-streamlit_app.py # Streamlit GUI app
-  src/ # Core logic
-    upload.py
-    clean.py
-    visualize.py
-    report.py
-uploads/ # Uploaded Excel files
-data/ # Cleaned Excel files
-output/ # PNG charts
-reports/ # PDF reports
+- streamlit_app.py # Streamlit GUI app
+- src/ # Core logic
+  - upload.py
+  - clean.py
+  - visualize.py
+  - report.py
+- uploads/ # Uploaded Excel files
+- data/ # Cleaned Excel files
+- output/ # PNG charts
+- reports/ # PDF reports
 
 ## Excel File Format (Required)
 Your Excel file must include these column headers:
