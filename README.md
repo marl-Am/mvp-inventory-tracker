@@ -1,4 +1,6 @@
-# 📦 Inventory & Revenue Tracker (Streamlit App) 
+## Inventory & Revenue Tracker (Streamlit App) 
+# [Live Demo](https://mvp-inventory-tracker.streamlit.app/)
+
 This app helps solo sellers manage old stock by uploading an Excel file, automatically cleaning and visualizing business data, and downloading detailed PDF reports. Built with Python, Pandas, Seaborn, and Streamlit.
 
 - Upload excel files via the GUI
